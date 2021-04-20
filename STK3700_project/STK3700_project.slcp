@@ -4,10 +4,11 @@ include:
   file_list:
   - {path: app.h}
 component:
+- {id: freertos}
 - {id: sl_system}
 - {id: device_init}
-- {id: brd2200a}
 - {id: EFM32GG990F1024}
+- {id: brd2200a}
 package: platform
 define:
 - {name: DEBUG_EFM}

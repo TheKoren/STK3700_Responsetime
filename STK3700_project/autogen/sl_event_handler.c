@@ -7,6 +7,7 @@
 #include "sl_device_init_lfxo.h"
 #include "sl_device_init_clocks.h"
 #include "sl_device_init_emu.h"
+#include "cmsis_os2.h"
 
 void sl_platform_init(void)
 {
@@ -18,6 +19,12 @@ void sl_platform_init(void)
   sl_device_init_clocks();
   sl_device_init_emu();
   sl_board_init();
+  osKernelInitialize();
+}
+
+void sl_kernel_start(void)
+{
+  osKernelStart();
 }
 
 void sl_driver_init(void)
@@ -33,22 +40,6 @@ void sl_stack_init(void)
 }
 
 void sl_internal_app_init(void)
-{
-}
-
-void sl_platform_process_action(void)
-{
-}
-
-void sl_service_process_action(void)
-{
-}
-
-void sl_stack_process_action(void)
-{
-}
-
-void sl_internal_app_process_action(void)
 {
 }
 

@@ -1,6 +1,6 @@
 /***************************************************************************//**
  * @file
- * @brief System process action.
+ * @brief System Kernel Initialization.
  *******************************************************************************
  * # License
  * <b>Copyright 2019 Silicon Laboratories Inc. www.silabs.com</b>
@@ -27,12 +27,27 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
-#include "sl_event_handler.h"
+#ifndef SL_SYSTEM_KERNEL_H
+#define SL_SYSTEM_KERNEL_H
 
-void sl_system_process_action(void)
-{
-  sl_platform_process_action();
-  sl_service_process_action();
-  sl_stack_process_action();
-  sl_internal_app_process_action();
+/***************************************************************************//**
+ * @addtogroup system
+ * @{
+ ******************************************************************************/
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/**
+ * Start the kernel
+ */
+void sl_system_kernel_start(void);
+
+#ifdef __cplusplus
 }
+#endif
+
+/** @} (end addtogroup system) */
+
+#endif // SL_SYSTEM_KERNEL_H
