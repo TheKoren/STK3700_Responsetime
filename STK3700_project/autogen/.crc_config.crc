@@ -1,0 +1,6 @@
+#CRC Codes for initially generated config files -- do not modify!
+#Tue Apr 20 16:32:38 CEST 2021
+sl_device_init_lfxo_config.h=1914419521
+sl_device_init_hfxo_config.h=-1870218475
+sl_board_control_config.h=-1443687891
+sl_memory_config.h=687128566

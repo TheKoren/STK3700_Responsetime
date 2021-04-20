@@ -1,0 +1,25 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+include:
+- path: ''
+  file_list:
+  - {path: app.h}
+component:
+- {id: sl_system}
+- {id: device_init}
+- {id: brd2200a}
+- {id: EFM32GG990F1024}
+package: platform
+define:
+- {name: DEBUG_EFM}
+description: |
+  This example project shows an empty configuration that can be used as a starting point to add components and functionality.
+label: STK3700_project
+source:
+- {path: app.c}
+- {path: main.c}
+project_name: STK3700_project
+category: Example|Platform
+toolchain_settings: []
+ui_hints: {}
+quality: production
+
