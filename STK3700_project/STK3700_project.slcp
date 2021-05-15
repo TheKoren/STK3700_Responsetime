@@ -11,6 +11,7 @@ component:
 - {id: iostream_retarget_stdio}
 - {id: device_init}
 - {id: iostream_swo}
+- {id: ustimer}
 - {id: emlib_timer}
 - {id: EFM32GG990F1024}
 - {id: brd2200a}
