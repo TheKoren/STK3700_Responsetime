@@ -3,9 +3,10 @@
   <folder name="config">
     <file name="sl_memory_config.h" uri="studio:/project/config/sl_memory_config.h"/>
     <file name="sl_board_control_config.h" uri="studio:/project/config/sl_board_control_config.h"/>
+    <file name="sl_debug_swo_config.h" uri="studio:/project/config/sl_debug_swo_config.h"/>
     <file name="sl_device_init_lfxo_config.h" uri="studio:/project/config/sl_device_init_lfxo_config.h"/>
     <file name="sl_device_init_hfxo_config.h" uri="studio:/project/config/sl_device_init_hfxo_config.h"/>
-    <file name="FreeRTOSConfig.h" generated="true" uri="studio:/project/config/FreeRTOSConfig.h"/>
+    <file name="FreeRTOSConfig.h" uri="studio:/project/config/FreeRTOSConfig.h"/>
   </folder>
   <includePath uri="studio:/project/config/"/>
 </project>

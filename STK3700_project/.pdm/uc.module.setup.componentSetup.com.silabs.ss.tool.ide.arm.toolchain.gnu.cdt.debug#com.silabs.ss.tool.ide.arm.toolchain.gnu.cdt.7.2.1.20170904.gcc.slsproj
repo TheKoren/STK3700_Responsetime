@@ -17,6 +17,10 @@
           <file name="sl_cmsis_os2_common.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/common/inc/sl_cmsis_os2_common.h"/>
           <file name="sl_enum.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/common/inc/sl_enum.h"/>
           <file name="sl_status.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/common/inc/sl_status.h"/>
+          <file name="sli_cmsis_os2_ext_task_register.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/common/inc/sli_cmsis_os2_ext_task_register.h"/>
+        </folder>
+        <folder name="src">
+          <file name="sli_cmsis_os2_ext_task_register.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/common/src/sli_cmsis_os2_ext_task_register.c"/>
         </folder>
       </folder>
       <folder name="service">
@@ -28,6 +32,17 @@
           <folder name="inc">
             <file name="sl_system_kernel.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/service/system/inc/sl_system_kernel.h"/>
             <file name="sl_system_init.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/service/system/inc/sl_system_init.h"/>
+          </folder>
+        </folder>
+        <folder name="iostream">
+          <folder name="src">
+            <file name="sl_iostream_retarget_stdio.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/service/iostream/src/sl_iostream_retarget_stdio.c"/>
+            <file name="sl_iostream.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/service/iostream/src/sl_iostream.c"/>
+            <file name="sl_iostream_swo.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/service/iostream/src/sl_iostream_swo.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_iostream.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/service/iostream/inc/sl_iostream.h"/>
+            <file name="sl_iostream_swo.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/service/iostream/inc/sl_iostream_swo.h"/>
           </folder>
         </folder>
         <folder name="device_init">
@@ -50,15 +65,18 @@
         <folder name="src">
           <file name="em_system.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_system.c"/>
           <file name="em_gpio.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_gpio.c"/>
+          <file name="em_lcd.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_lcd.c"/>
           <file name="em_emu.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_emu.c"/>
           <file name="em_cmu.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_cmu.c"/>
           <file name="em_assert.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_assert.c"/>
+          <file name="em_timer.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_timer.c"/>
           <file name="em_core.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_core.c"/>
         </folder>
         <folder name="inc">
           <file name="em_system.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_system.h"/>
           <file name="em_chip.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_chip.h"/>
           <file name="em_gpio.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_gpio.h"/>
+          <file name="em_lcd.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_lcd.h"/>
           <file name="em_emu.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_emu.h"/>
           <file name="em_cmu.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_cmu.h"/>
           <file name="em_cmu_compat.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_cmu_compat.h"/>
@@ -67,6 +85,7 @@
           <file name="em_common.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_common.h"/>
           <file name="em_ramfunc.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_ramfunc.h"/>
           <file name="em_version.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_version.h"/>
+          <file name="em_timer.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_timer.h"/>
           <file name="em_core.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_core.h"/>
         </folder>
       </folder>
@@ -89,6 +108,16 @@
           <file name="cmsis_gcc.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/CMSIS/Include/cmsis_gcc.h"/>
           <file name="core_cm3.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/CMSIS/Include/core_cm3.h"/>
           <file name="mpu_armv7.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/CMSIS/Include/mpu_armv7.h"/>
+        </folder>
+      </folder>
+      <folder name="driver">
+        <folder name="debug">
+          <folder name="src">
+            <file name="sl_debug_swo.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/driver/debug/src/sl_debug_swo.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_debug_swo.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/driver/debug/inc/sl_debug_swo.h"/>
+          </folder>
         </folder>
       </folder>
       <folder name="Device">
@@ -238,7 +267,9 @@
   <includePath uri="studio:/project/gecko_sdk_3.1.1/hardware/board/inc"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/common/inc"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/emlib/inc"/>
+  <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/service/iostream/inc"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/service/device_init/inc"/>
+  <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/driver/debug/inc"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/util/third_party/freertos/CMSIS/RTOS2/FreeRTOS/Include"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/util/third_party/freertos/Source/include"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/util/third_party/freertos/Source/portable/GCC/ARM_CM3"/>
@@ -247,6 +278,7 @@
   <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/Device/SiliconLabs/EFM32GG/Include"/>
   <macroDefinition name="DEBUG_EFM"/>
   <macroDefinition name="GCC_ARMCM3"/>
+  <macroDefinition name="configNUM_SDK_THREAD_LOCAL_STORAGE_POINTERS" value="2"/>
   <macroDefinition name="SL_COMPONENT_CATALOG_PRESENT"/>
   <macroDefinition name="EFM32GG990F1024"/>
   <libraryFile name="gcc"/>

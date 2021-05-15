@@ -5,8 +5,12 @@ include:
   - {path: app.h}
 component:
 - {id: freertos}
+- {id: emlib_lcd}
 - {id: sl_system}
+- {id: iostream_retarget_stdio}
 - {id: device_init}
+- {id: iostream_swo}
+- {id: emlib_timer}
 - {id: EFM32GG990F1024}
 - {id: brd2200a}
 package: platform
