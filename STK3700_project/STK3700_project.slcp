@@ -4,6 +4,7 @@ include:
   file_list:
   - {path: app.h}
 component:
+- {id: emlib_i2c}
 - {id: freertos}
 - {id: emlib_lcd}
 - {id: sl_system}

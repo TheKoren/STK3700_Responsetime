@@ -18,8 +18,36 @@
 /***************************************************************************//**
  * Initialize application.
  ******************************************************************************/
+
+#include "em_gpio.h"
+#include <i2ccom.h>
+
+#include "FreeRTOS.h" // Ez legyen az első FreeRTOS header
+#include "task.h"
+#include "mytasks.h"
+
+static void prvTaskLightSensor(void *pvParam)
+{
+  while(1){
+  I2C_Work();}
+  vTaskDelete(NULL); // Aktuális taszk törlése
+}
+
 void app_init(void)
 {
+  I2C_Initfasz();
+
+  xTaskCreate
+  (
+      prvTaskLightSensor,
+      "LightSensor",
+      configMINIMAL_STACK_SIZE,
+      NULL,
+      tskIDLE_PRIORITY + 1,
+      NULL
+  );
+
+
 }
 
 /***************************************************************************//**
@@ -27,4 +55,5 @@ void app_init(void)
  ******************************************************************************/
 void app_process_action(void)
 {
+
 }
