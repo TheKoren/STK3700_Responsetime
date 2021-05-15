@@ -63,32 +63,32 @@
       </folder>
       <folder name="emlib">
         <folder name="src">
-          <file name="em_i2c.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_i2c.c"/>
-          <file name="em_system.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_system.c"/>
-          <file name="em_gpio.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_gpio.c"/>
-          <file name="em_lcd.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_lcd.c"/>
-          <file name="em_emu.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_emu.c"/>
-          <file name="em_cmu.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_cmu.c"/>
-          <file name="em_assert.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_assert.c"/>
-          <file name="em_timer.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_timer.c"/>
-          <file name="em_core.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_core.c"/>
+          <file name="em_i2c.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_i2c.c"/>
+          <file name="em_system.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_system.c"/>
+          <file name="em_gpio.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_gpio.c"/>
+          <file name="em_lcd.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_lcd.c"/>
+          <file name="em_emu.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_emu.c"/>
+          <file name="em_cmu.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_cmu.c"/>
+          <file name="em_assert.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_assert.c"/>
+          <file name="em_timer.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_timer.c"/>
+          <file name="em_core.c" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/src/em_core.c"/>
         </folder>
         <folder name="inc">
-          <file name="em_i2c.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_i2c.h"/>
-          <file name="em_system.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_system.h"/>
-          <file name="em_chip.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_chip.h"/>
-          <file name="em_gpio.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_gpio.h"/>
-          <file name="em_lcd.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_lcd.h"/>
-          <file name="em_emu.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_emu.h"/>
-          <file name="em_cmu.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_cmu.h"/>
-          <file name="em_cmu_compat.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_cmu_compat.h"/>
-          <file name="em_assert.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_assert.h"/>
-          <file name="em_bus.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_bus.h"/>
-          <file name="em_common.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_common.h"/>
-          <file name="em_ramfunc.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_ramfunc.h"/>
-          <file name="em_version.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_version.h"/>
-          <file name="em_timer.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_timer.h"/>
-          <file name="em_core.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_core.h"/>
+          <file name="em_i2c.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_i2c.h"/>
+          <file name="em_system.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_system.h"/>
+          <file name="em_chip.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_chip.h"/>
+          <file name="em_gpio.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_gpio.h"/>
+          <file name="em_lcd.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_lcd.h"/>
+          <file name="em_emu.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_emu.h"/>
+          <file name="em_cmu.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_cmu.h"/>
+          <file name="em_cmu_compat.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_cmu_compat.h"/>
+          <file name="em_assert.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_assert.h"/>
+          <file name="em_bus.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_bus.h"/>
+          <file name="em_common.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_common.h"/>
+          <file name="em_ramfunc.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_ramfunc.h"/>
+          <file name="em_version.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_version.h"/>
+          <file name="em_timer.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_timer.h"/>
+          <file name="em_core.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/emlib/inc/em_core.h"/>
         </folder>
       </folder>
       <folder name="CMSIS">
@@ -119,21 +119,6 @@
           </folder>
           <folder name="inc">
             <file name="sl_debug_swo.h" linked="false" uri="file:///D:/Program%20Files/Simplicity%20Studio5/developer/sdks/gecko_sdk_suite/v3.1/platform/driver/debug/inc/sl_debug_swo.h"/>
-          </folder>
-        </folder>
-      </folder>
-      <folder name="emdrv">
-        <folder name="ustimer">
-          <folder name="src">
-            <file name="ustimer.c" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emdrv/ustimer/src/ustimer.c"/>
-          </folder>
-          <folder name="inc">
-            <file name="ustimer.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emdrv/ustimer/inc/ustimer.h"/>
-          </folder>
-        </folder>
-        <folder name="common">
-          <folder name="inc">
-            <file name="ecode.h" linked="false" uri="file:///C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.1/platform/emdrv/common/inc/ecode.h"/>
           </folder>
         </folder>
       </folder>
@@ -292,8 +277,6 @@
   <includePath uri="studio:/project/gecko_sdk_3.1.1/util/third_party/freertos/Source/portable/GCC/ARM_CM3"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/CMSIS/RTOS2/Include"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/CMSIS/Include"/>
-  <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/emdrv/ustimer/inc"/>
-  <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/emdrv/common/inc"/>
   <includePath uri="studio:/project/gecko_sdk_3.1.1/platform/Device/SiliconLabs/EFM32GG/Include"/>
   <macroDefinition name="DEBUG_EFM"/>
   <macroDefinition name="GCC_ARMCM3"/>
