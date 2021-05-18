@@ -16,7 +16,7 @@
 
 /* Function declarations */
 
-void I2C_Initfasz(void);
+void myI2C_Init(void);
 
 void I2C_Work(void);
 
