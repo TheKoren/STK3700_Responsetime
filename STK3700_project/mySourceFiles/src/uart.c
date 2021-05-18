@@ -1,5 +1,6 @@
 #include "uart.h"
 
+
 void uartInit(void)
 {
     CMU_ClockEnable(cmuClock_UART0, true);
@@ -15,6 +16,7 @@ void uartInit(void)
 
     USART_IntEnable(UART0,UART_IF_RXDATAV);
     NVIC_EnableIRQ(UART0_RX_IRQn);
+    startcode = '0';
 
 }
 
@@ -47,9 +49,8 @@ void uartCommandInterpreter(char c)
 
 void UART0_RX_IRQHandler(void)
 {
-    char c;
-    c = (char) USART_RxDataGet(UART0);
+    startcode = (char) USART_RxDataGet(UART0);
 
-    uartCommandInterpreter(c);
+    //uartCommandInterpreter(c);
 
 }

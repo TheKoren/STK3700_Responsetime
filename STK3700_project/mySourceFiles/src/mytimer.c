@@ -24,7 +24,7 @@ void myTimer1_Init(void){
 
   CMU_ClockEnable(cmuClock_TIMER1, true);
 
-  TIMER1_init.enable      = false;
+  TIMER1_init.enable      = true;
   TIMER1_init.debugRun    = false;
   TIMER1_init.prescale    = timerPrescale1024;
   TIMER1_init.clkSel      = timerClkSelHFPerClk;
@@ -35,12 +35,12 @@ void myTimer1_Init(void){
   TIMER1_init.mode        = timerModeUp;
   TIMER1_init.dmaClrAct   = true;
   TIMER1_init.quadModeX4  = false;
-  TIMER1_init.oneShot     = true;   // count up only once
+  TIMER1_init.oneShot     = false;   // count up only once
   TIMER1_init.sync        = false;
 
   TIMER_Init(TIMER1, &TIMER1_init);
 
-  TIMER_TopBufSet(TIMER1, 60000); // Joval tobb mint 1-2 másodperc
+  TIMER_TopBufSet(TIMER1, 60000);
 
   /*
    * HASZNALANDO:
