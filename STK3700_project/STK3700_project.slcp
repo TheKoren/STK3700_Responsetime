@@ -10,11 +10,14 @@ component:
 - {id: sl_system}
 - {id: iostream_retarget_stdio}
 - {id: device_init}
-- {id: iostream_swo}
+- {id: iostream_stdlib_config}
+- instance: [vcom]
+  id: iostream_usart
 - {id: ustimer}
 - {id: emlib_timer}
-- {id: EFM32GG990F1024}
 - {id: brd2200a}
+- {id: EFM32GG990F1024}
+- {id: emlib_usart}
 package: platform
 define:
 - {name: DEBUG_EFM}

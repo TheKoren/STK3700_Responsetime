@@ -21,21 +21,28 @@
 
 #include "em_gpio.h"
 #include <i2ccom.h>
-#include <em_timer.h>
+#include "uart.h"
+#include "kijelzo.h"
+#include <stdio.h>
+
 #include "FreeRTOS.h" // Ez legyen az első FreeRTOS header
 #include "task.h"
-#include "mytasks.h"
 
 static void prvTaskLightSensor(void *pvParam)
 {
   while(1){
-  I2C_Work();}
+  //I2C_Work();
+  }
   vTaskDelete(NULL); // Aktuális taszk törlése
 }
 
 void app_init(void)
 {
   I2C_Initfasz();
+  kijelzoInit();
+  uartInit();
+  kijelzoPrint("Hello!");
+  printf("Hello World\r\n");
 
   xTaskCreate
   (

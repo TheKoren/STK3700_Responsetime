@@ -18,7 +18,7 @@
 
 /* private variables */
 static SegmentLCD_BlockMode_TypeDef fullRow[SEGMENT_LCD_NUM_BLOCK_COLUMNS] = {BLOCKMODE_ARG_FULL};
-static SegmentLCD_BlockMode_TypeDef emptyRow[SEGMENT_LCD_NUM_BLOCK_COLUMNS] = {BLOCKMODE_ARG_EMPTY};
+//static SegmentLCD_BlockMode_TypeDef emptyRow[SEGMENT_LCD_NUM_BLOCK_COLUMNS] = {BLOCKMODE_ARG_EMPTY};
 
 
 
@@ -70,3 +70,9 @@ void kijelzoTestSetup(void)
     kijelzoInit();
     kijelzoGeckoSign(1);
 }
+
+void kijelzoPrint(const char *str)
+{
+    SegmentLCD_Write(str);
+}
+

@@ -1,9 +1,15 @@
 #CRC Codes for initially generated config files -- do not modify!
-#Sat May 15 15:50:56 CEST 2021
+#Tue May 18 13:33:51 CEST 2021
+SEGGER_RTT_Conf.h=-2139387046
+sl_device_init_lfxo_config.h=1914419521
+sl_iostream_vuart_config.h=1307377037
+ustimer_config.h=2106674886
+sl_uartdrv_usart_vcom_config.h=665376937
 FreeRTOSConfig.h=142173558
 sl_debug_swo_config.h=-1470381492
-sl_device_init_lfxo_config.h=1914419521
 sl_device_init_hfxo_config.h=-1870218475
+uartdrv_config.h=-941504238
 sl_board_control_config.h=-1443687891
+dmadrv_config.h=-1131831653
 sl_memory_config.h=687128566
-ustimer_config.h=2106674886
+sl_iostream_usart_vcom_config.h=-1530997781

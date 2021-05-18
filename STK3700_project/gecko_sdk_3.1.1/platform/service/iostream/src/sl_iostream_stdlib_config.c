@@ -1,9 +1,9 @@
 /***************************************************************************//**
  * @file
- * @brief SWO configuration
+ * @brief IO Stream Nanolib.
  *******************************************************************************
  * # License
- * <b>Copyright 2020 Silicon Laboratories Inc. www.silabs.com</b>
+ * <b>Copyright 2019 Silicon Laboratories Inc. www.silabs.com</b>
  *******************************************************************************
  *
  * SPDX-License-Identifier: Zlib
@@ -28,39 +28,14 @@
  *
  ******************************************************************************/
 
-#ifndef SL_DEBUG_SWO_CONFIG_H
-#define SL_DEBUG_SWO_CONFIG_H
+#include "stdio.h"
 
-// <<< Use Configuration Wizard in Context Menu >>>
-
-// <h>SWO Configuration
-
-// <o SL_DEBUG_SWO_FREQ> SWO Frequency
-// <i> Must be 875 kHz for communication with Silicon Labs debuggers
-// <i> Default: 875000
-#define SL_DEBUG_SWO_FREQ                       875000
-
-// <q SL_DEBUG_SWO_SAMPLE_IRQ> Enable interrupt event trace
-// <i> Default: 0
-#define SL_DEBUG_SWO_SAMPLE_IRQ                 0
-
-// <q SL_DEBUG_SWO_SAMPLE_PC> Enable Program Counter samples
-// <i> Default: 0
-#define SL_DEBUG_SWO_SAMPLE_PC                  0
-
-// </h>
-
-// <<< end of configuration section >>>
-
-// <<< sl:start pin_tool >>>
-// <dbg signal=SWO> SL_DEBUG
-// $[DBG_SL_DEBUG]
-#define SL_DEBUG_PERIPHERAL                     DBG
-
-#define SL_DEBUG_SWO_PORT                       gpioPortF
-#define SL_DEBUG_SWO_PIN                        2
-#define SL_DEBUG_ROUTE_LOC                      0
-// [DBG_SL_DEBUG]$
-// <<< sl:end pin_tool >>>
-
-#endif // SL_DEBUG_SWO_CONFIG_H
+/***************************************************************************//**
+ * Disable standard library buffering
+ ******************************************************************************/
+void sl_iostream_stdlib_disable_buffering(void)
+{
+#if !defined(__CROSSWORKS_ARM) && defined(__GNUC__)
+  setvbuf(stdout, NULL, _IONBF, 0);   /*Set unbuffered mode for stdout (newlib)*/
+#endif
+}
