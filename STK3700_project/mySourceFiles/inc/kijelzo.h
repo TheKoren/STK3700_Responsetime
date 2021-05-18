@@ -27,5 +27,7 @@ void kijelzoTestLoop(void);
 
 void kijelzoTestSetup(void);
 
+void kijelzoPrint(const char *str);
+
 
 #endif /* MYSOURCEFILES_INC_KIJELZO_H_ */
