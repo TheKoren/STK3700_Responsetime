@@ -20,8 +20,6 @@ volatile _Bool mydelayflag;
 
 void myTimer1_Init(void);
 
-void TIMER1_IRQHandler(void);
-
 //void myDelay_ms(uint32_t ms);
 
 

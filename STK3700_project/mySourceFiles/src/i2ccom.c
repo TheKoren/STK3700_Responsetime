@@ -13,7 +13,7 @@ I2C_TransferSeq_TypeDef seq;
 uint8_t data_buf_0[3];
 uint8_t data_buf_1[2];
 
-void I2C_Initfasz(void)
+void myI2C_Init(void)
 {
     SegmentLCD_Init(false);
     I2CSPM_Init_TypeDef i2cspm_init = I2CSPM_INIT_DEFAULT;
