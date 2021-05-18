@@ -21,7 +21,7 @@
 
 #include "em_gpio.h"
 #include <i2ccom.h>
-
+#include <em_timer.h>
 #include "FreeRTOS.h" // Ez legyen az első FreeRTOS header
 #include "task.h"
 #include "mytasks.h"
@@ -46,7 +46,6 @@ void app_init(void)
       tskIDLE_PRIORITY + 1,
       NULL
   );
-
 
 }
 
