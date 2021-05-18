@@ -21,7 +21,6 @@
 
 #include "em_gpio.h"
 #include <i2ccom.h>
-#include "uart.h"
 #include "kijelzo.h"
 #include <stdio.h>
 #include "inttypes.h"
@@ -35,7 +34,7 @@
 
 uint32_t reactiontick;
 
-typedef enum {IDLE, RUNNING, DONE} phase;
+typedef enum {IDLE, START, RUNNING, DONE} phase;
 
 typedef struct ProgramControl {
   phase phase;
@@ -43,13 +42,14 @@ typedef struct ProgramControl {
   uint16_t lightsensor;
   uint32_t seed;
 }ProgramControl;
+ProgramControl Control;
 
-ProgramControl Control = {IDLE, 0, 0,0};
 
 static void prvTaskLightSensor(void *pvParam)
 {
   while(1)
   {
+      //printf("LightSensor Working");
       I2C_Work();
       vTaskDelay((10 * configTICK_RATE_HZ) / 1000); // Sleep for 10ms
   }
@@ -60,30 +60,35 @@ SemaphoreHandle_t reactmeasure;
 
 uint32_t tick0;
 
-static void prvTaskStart(void *pvParam)
+static void prvTaskStart (void *pvParam)
 {
-  if((startcode == 'f') & (Control.phase == IDLE) )
+  while (1)
     {
-      startcode = '0';
-      Control.phase = RUNNING;
-      Control.seed = TIMER_CounterGet(TIMER1);
-      srand(Control.seed);
-      xSemaphoreGive(reactmeasure);
+      char c;
+      c = getchar();
+      if ((c == 'f') & (Control.phase == IDLE))
+        {
+          c = '0';
+          Control.phase = START;
+          Control.seed = TIMER_CounterGet (TIMER1);
+          srand (Control.seed);
+          xSemaphoreGive(reactmeasure);
+        }
+      c = '0';
+      vTaskDelay (configTICK_RATE_HZ / 1000);
     }
-  startcode = '0';
-  vTaskDelay(configTICK_RATE_HZ/1000);
 }
 
 static void prvTaskReaction(void *pvParam)
 {
   while (1)
     {
-      xSemaphoreTake(reactmeasure, portMAX_DELAY);
-      if (Control.phase == RUNNING)
+      xSemaphoreTake(reactmeasure, portMAX_DELAY); // Elvileg itt megpusztul, ha egyszer már megkapta
+      if (Control.phase == START)
         {
           kijelzoCountdown ();
-          tick0 = xTaskGetTickCount ();
-          while (1);  // Waiting for button press
+          Control.phase = RUNNING;
+          tick0 = xTaskGetTickCount();
         }
     }
 
@@ -103,28 +108,17 @@ static void prvTaskProcessData(void *pvParam)
           /*
            * Code...
            */
-          printf("%u", Control.lightsensor);
-          printf("\n");
-          printf("%lu", Control.reactiontime);
-          printf("\n");
-          printf("\n");
+          printf("Measured light: ");
+          printf("%u LUX\r\n", Control.lightsensor);
+          printf("Measured Time: ");
+          printf("%lu ms\r\n", Control.reactiontime);
+          SegmentLCD_LowerNumber(Control.lightsensor);
+          SegmentLCD_Number(Control.reactiontime);
           Control.phase = IDLE;
         }
     }
 }
 
-static void prvTaskLCD(void *pvParam)
-{
-  while(1)
-    {
-      if(Control.phase == DONE)
-        {
-          SegmentLCD_LowerNumber(Control.lightsensor);
-          SegmentLCD_Number(Control.reactiontime);
-        }
-      vTaskDelay(configTICK_RATE_HZ);
-    }
-}
 
 void GPIO_ODD_IRQHandler (void)
 {
@@ -132,6 +126,7 @@ void GPIO_ODD_IRQHandler (void)
   GPIO_IntClear (1 << 9);
   if (Control.phase == RUNNING)
     {
+     // printf("Interrupt!");
       Control.lightsensor = luxvalue;
       Control.reactiontime = xTaskGetTickCountFromISR () - tick0;
       Control.phase = DONE;
@@ -143,8 +138,11 @@ void GPIO_ODD_IRQHandler (void)
 
 void app_init(void)
 {
+  Control.lightsensor = 0;
+  Control.phase = IDLE;
+  Control.reactiontime = 0;
+  Control.seed = 0;
   kijelzoInit();
-  uartInit();
   myI2C_Init();
   myTimer1_Init();
 
@@ -192,22 +190,13 @@ void app_init(void)
       NULL
   );
 
-  xTaskCreate
-  (
-      prvTaskLCD,
-      "LCD",
-      configMINIMAL_STACK_SIZE,
-      NULL,
-      tskIDLE_PRIORITY + 2,
-      NULL
-  );
+
 
   GPIO_PinModeSet(gpioPortB, 9, gpioModeInput, 0);
   GPIO_ExtIntConfig(gpioPortB, 9, 9, false, true, true);
 
   NVIC_EnableIRQ(GPIO_ODD_IRQn);
 
-  vTaskStartScheduler();
 }
 
 /***************************************************************************//**

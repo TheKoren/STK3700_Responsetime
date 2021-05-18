@@ -11,6 +11,7 @@
 /* Includes */
 #include "segmentlcdconfig.h"
 #include "segmentlcd.h"
+#include <stdlib.h>
 
 
 /* Function declarations */

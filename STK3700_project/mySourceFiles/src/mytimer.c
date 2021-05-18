@@ -41,7 +41,6 @@ void myTimer1_Init(void){
   TIMER_Init(TIMER1, &TIMER1_init);
 
   TIMER_TopBufSet(TIMER1, 60000);
-
   /*
    * HASZNALANDO:
    * TIMER_CounterGet(TIMER1); // Timerből a cucc kiszedése
