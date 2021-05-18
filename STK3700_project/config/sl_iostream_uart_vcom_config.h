@@ -1,6 +1,6 @@
 /***************************************************************************//**
  * @file
- * @brief IOSTREAM_USART Config.
+ * @brief IOSTREAM_UART Config.
  *******************************************************************************
  * # License
  * <b>Copyright 2020 Silicon Laboratories Inc. www.silabs.com</b>
@@ -27,68 +27,68 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
-#ifndef SL_IOSTREAM_USART_VCOM_CONFIG_H
-#define SL_IOSTREAM_USART_VCOM_CONFIG_H
+#ifndef SL_IOSTREAM_UART_VCOM_CONFIG_H
+#define SL_IOSTREAM_UART_VCOM_CONFIG_H
 
 // <<< Use Configuration Wizard in Context Menu >>>
 
-// <h>USART settings
+// <h>UART settings
 
-// <o SL_IOSTREAM_USART_VCOM_BAUDRATE> Baud rate
+// <o SL_IOSTREAM_UART_VCOM_BAUDRATE> Baud rate
 // <i> Default: 115200
-#define SL_IOSTREAM_USART_VCOM_BAUDRATE              115200
+#define SL_IOSTREAM_UART_VCOM_BAUDRATE              115200
 
-// <o SL_IOSTREAM_USART_VCOM_PARITY> Parity mode to use
+// <o SL_IOSTREAM_UART_VCOM_PARITY> Parity mode to use
 // <usartNoParity=> No Parity
 // <usartEvenParity=> Even parity
 // <usartOddParity=> Odd parity
 // <i> Default: usartNoParity
-#define SL_IOSTREAM_USART_VCOM_PARITY                usartNoParity
+#define SL_IOSTREAM_UART_VCOM_PARITY                usartNoParity
 
-// <o SL_IOSTREAM_USART_VCOM_STOP_BITS> Number of stop bits to use.
+// <o SL_IOSTREAM_UART_VCOM_STOP_BITS> Number of stop bits to use.
 // <usartStopbits0p5=> 0.5 stop bits
 // <usartStopbits1=> 1 stop bits
 // <usartStopbits1p5=> 1.5 stop bits
 // <usartStopbits2=> 2 stop bits
 // <i> Default: usartStopbits1
-#define SL_IOSTREAM_USART_VCOM_STOP_BITS             usartStopbits1
+#define SL_IOSTREAM_UART_VCOM_STOP_BITS             usartStopbits1
 
-// <o SL_IOSTREAM_USART_VCOM_RX_BUFFER_SIZE> Receive buffer size
+// <o SL_IOSTREAM_UART_VCOM_RX_BUFFER_SIZE> Receive buffer size
 // <i> Default: 32
-#define SL_IOSTREAM_USART_VCOM_RX_BUFFER_SIZE    32
+#define SL_IOSTREAM_UART_VCOM_RX_BUFFER_SIZE    32
 
-// <q SL_IOSTREAM_USART_VCOM_CONVERT_BY_DEFAULT_LF_TO_CRLF> Convert \n to \r\n
+// <q SL_IOSTREAM_UART_VCOM_CONVERT_BY_DEFAULT_LF_TO_CRLF> Convert \n to \r\n
 // <i> It can be changed at runtime using the C API.
 // <i> Default: 0
-#define SL_IOSTREAM_USART_VCOM_CONVERT_BY_DEFAULT_LF_TO_CRLF     0
+#define SL_IOSTREAM_UART_VCOM_CONVERT_BY_DEFAULT_LF_TO_CRLF     0
 
-// <q SL_IOSTREAM_USART_VCOM_RESTRICT_ENERGY_MODE_TO_ALLOW_RECEPTION> Restrict the energy mode to allow the reception.
+// <q SL_IOSTREAM_UART_VCOM_RESTRICT_ENERGY_MODE_TO_ALLOW_RECEPTION> Restrict the energy mode to allow the reception.
 // <i> Default: 1
 // <i> Limits the lowest energy mode the system can sleep to in order to keep the reception on. May cause higher power consumption.
-#define SL_IOSTREAM_USART_VCOM_RESTRICT_ENERGY_MODE_TO_ALLOW_RECEPTION    1
+#define SL_IOSTREAM_UART_VCOM_RESTRICT_ENERGY_MODE_TO_ALLOW_RECEPTION    1
 
 // </h>
 
 // <<< end of configuration section >>>
 
 // <<< sl:start pin_tool >>>
-// <usart signal=TX,RX,(CTS),(RTS)> SL_IOSTREAM_USART_VCOM
-// $[USART_SL_IOSTREAM_USART_VCOM]
-#define SL_IOSTREAM_USART_VCOM_PERIPHERAL        UART0
-#define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO     0
+// <uart signal=TX,RX,(CTS),(RTS)> SL_IOSTREAM_UART_VCOM
+// $[UART_SL_IOSTREAM_UART_VCOM]
+#define SL_IOSTREAM_UART_VCOM_PERIPHERAL        UART0
+#define SL_IOSTREAM_UART_VCOM_PERIPHERAL_NO     0
 
 // UART0 TX on PE0
-#define SL_IOSTREAM_USART_VCOM_TX_PORT           gpioPortE
-#define SL_IOSTREAM_USART_VCOM_TX_PIN            0
-#define SL_IOSTREAM_USART_VCOM_ROUTE_LOC         1
+#define SL_IOSTREAM_UART_VCOM_TX_PORT           gpioPortE
+#define SL_IOSTREAM_UART_VCOM_TX_PIN            0
+#define SL_IOSTREAM_UART_VCOM_ROUTE_LOC         1
 
 // UART0 RX on PE1
-#define SL_IOSTREAM_USART_VCOM_RX_PORT           gpioPortE
-#define SL_IOSTREAM_USART_VCOM_RX_PIN            1
+#define SL_IOSTREAM_UART_VCOM_RX_PORT           gpioPortE
+#define SL_IOSTREAM_UART_VCOM_RX_PIN            1
 
 
 
-// [USART_SL_IOSTREAM_USART_VCOM]$
+// [UART_SL_IOSTREAM_UART_VCOM]$
 // <<< sl:end pin_tool >>>
 
 #endif

@@ -18,14 +18,14 @@
 
 /* private variables */
 static SegmentLCD_BlockMode_TypeDef fullRow[SEGMENT_LCD_NUM_BLOCK_COLUMNS] = {BLOCKMODE_ARG_FULL};
-//static SegmentLCD_BlockMode_TypeDef emptyRow[SEGMENT_LCD_NUM_BLOCK_COLUMNS] = {BLOCKMODE_ARG_EMPTY};
+static SegmentLCD_BlockMode_TypeDef emptyRow[SEGMENT_LCD_NUM_BLOCK_COLUMNS] = {BLOCKMODE_ARG_EMPTY};
 
 
 
 /* Function implementations */
 void kijelzoInit(void)
 {
-    SegmentLCD_Init(false);
+    SegmentLCD_Init(true);
     SegmentLCD_AllOff();
 }
 
@@ -36,18 +36,19 @@ void kijelzoGeckoSign(int on)
 
 void kijelzoCountdown(void)
 {
+    SegmentLCD_AllOff();
     SegmentLCD_LowerNumber(3);
-    USTIMER_Delay(S_FOR_DELAY);
+    sl_udelay_wait(S_FOR_DELAY);
     SegmentLCD_LowerNumber(2);
-    USTIMER_Delay(S_FOR_DELAY);
+    sl_udelay_wait(S_FOR_DELAY);
     SegmentLCD_LowerNumber(1);
-    USTIMER_Delay(MS_FOR_DELAY);
 
     //TODO: call random number generator and delay that much
 
-    USTIMER_Delay(S_FOR_DELAY);
-    uint32_t random = rand() % S_FOR_DELAY*3;
-    USTIMER_Delay(random);
+    sl_udelay_wait(S_FOR_DELAY);
+    SegmentLCD_Block(emptyRow, emptyRow);
+    uint32_t random = rand() %  S_FOR_DELAY*3;
+    sl_udelay_wait(random);
     SegmentLCD_Block(fullRow, fullRow);
 }
 

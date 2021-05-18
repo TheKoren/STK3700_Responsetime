@@ -10,8 +10,8 @@
     <file name="sl_iostream_handles.h" builtin="true" generated="true" uri="studio:/project/autogen/sl_iostream_handles.h"/>
     <file name="sl_iostream_handles.c" builtin="true" generated="true" uri="studio:/project/autogen/sl_iostream_handles.c"/>
     <file name="sl_iostream_init_instances.h" builtin="true" generated="true" uri="studio:/project/autogen/sl_iostream_init_instances.h"/>
-    <file name="sl_iostream_init_usart_instances.c" builtin="true" generated="true" uri="studio:/project/autogen/sl_iostream_init_usart_instances.c"/>
-    <file name="sl_iostream_init_usart_instances.h" builtin="true" generated="true" uri="studio:/project/autogen/sl_iostream_init_usart_instances.h"/>
+    <file name="sl_iostream_init_uart_instances.c" builtin="true" generated="true" uri="studio:/project/autogen/sl_iostream_init_uart_instances.c"/>
+    <file name="sl_iostream_init_uart_instances.h" builtin="true" generated="true" uri="studio:/project/autogen/sl_iostream_init_uart_instances.h"/>
     <file name="linkerfile.ld" builtin="true" generated="true" uri="studio:/project/autogen/linkerfile.ld"/>
   </folder>
   <includePath uri="studio:/project/autogen"/>

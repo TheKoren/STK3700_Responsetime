@@ -4,17 +4,18 @@ include:
   file_list:
   - {path: app.h}
 component:
+- instance: [vcom]
+  id: iostream_uart
 - {id: emlib_i2c}
 - {id: freertos}
 - {id: emlib_lcd}
-- {id: sl_system}
 - {id: iostream_retarget_stdio}
+- {id: sl_system}
 - {id: device_init}
 - {id: iostream_stdlib_config}
-- instance: [vcom]
-  id: iostream_usart
 - {id: ustimer}
 - {id: emlib_timer}
+- {id: udelay}
 - {id: brd2200a}
 - {id: EFM32GG990F1024}
 - {id: emlib_usart}

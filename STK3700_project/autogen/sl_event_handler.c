@@ -9,12 +9,12 @@
 #include "sl_device_init_emu.h"
 #include "sl_iostream_init_instances.h"
 #include "sl_iostream_stdlib_config.h"
-#include "sl_iostream_init_usart_instances.h"
+#include "sl_iostream_init_uart_instances.h"
 #include "cmsis_os2.h"
 
 void sl_iostream_init_instances(void)
 {
-  sl_iostream_usart_init_instances();
+  sl_iostream_uart_init_instances();
 }
 
 void sl_platform_init(void)
