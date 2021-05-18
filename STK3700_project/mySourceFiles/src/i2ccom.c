@@ -13,6 +13,7 @@ I2C_TransferSeq_TypeDef seq;
 uint8_t data_buf_0[3];
 uint8_t data_buf_1[2];
 
+
 void myI2C_Init(void)
 {
     SegmentLCD_Init(false);
@@ -49,6 +50,6 @@ void myI2C_Init(void)
 void I2C_Work(void)
 {
   I2CSPM_Transfer(I2C1, &seq);
-  SegmentLCD_LowerNumber(256 * data_buf_1[1]+ data_buf_1[0]);
+  luxvalue = 256 * data_buf_1[1] + data_buf_1[0];
 }
 

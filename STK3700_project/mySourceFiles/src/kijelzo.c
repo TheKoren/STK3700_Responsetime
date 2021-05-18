@@ -44,8 +44,10 @@ void kijelzoCountdown(void)
     USTIMER_Delay(MS_FOR_DELAY);
 
     //TODO: call random number generator and delay that much
-    USTIMER_Delay(S_FOR_DELAY);
 
+    USTIMER_Delay(S_FOR_DELAY);
+    uint32_t random = rand() % S_FOR_DELAY*3;
+    USTIMER_Delay(random);
     SegmentLCD_Block(fullRow, fullRow);
 }
 

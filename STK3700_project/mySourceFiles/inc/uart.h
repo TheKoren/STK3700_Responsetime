@@ -10,6 +10,8 @@
 
 char gUartBuffer[256];
 
+volatile char startcode;
+
 void uartInit(void);
 void UART0_RX_IRQHandler(void);
 

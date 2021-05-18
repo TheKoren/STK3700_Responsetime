@@ -15,6 +15,7 @@
 
 
 /* Function declarations */
+uint16_t luxvalue;
 
 void myI2C_Init(void);
 

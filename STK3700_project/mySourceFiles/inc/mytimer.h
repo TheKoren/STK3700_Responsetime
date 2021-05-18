@@ -15,12 +15,7 @@
 /* With 1024 Prescale, f(timer) = 13.672 kHz */
 #define TIMER1_FREQ 13.672;
 
-volatile _Bool timerflag;
-volatile _Bool mydelayflag;
-
 void myTimer1_Init(void);
-
-//void myDelay_ms(uint32_t ms);
 
 
 #endif /* MYSOURCEFILES_INC_MYTIMER_H_ */
