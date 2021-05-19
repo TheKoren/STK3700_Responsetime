@@ -13,7 +13,7 @@ int commandInterpreter(int argc, char *const *argv)
 {
   int opt = 0;
 
-  while((opt = getopt(argc, argv, "hs:m")) != -1){
+  while((opt = getopt(argc, argv, "hs:ma")) != -1){
     switch(opt){
       case 'h':
         cli_caseHelp();
@@ -23,6 +23,9 @@ int commandInterpreter(int argc, char *const *argv)
         break;
       case 'm':
         cli_caseMeasure();
+        break;
+      case 'a':
+        cli_caseMeanTime();
         break;
     }
   }
@@ -53,5 +56,31 @@ void cli_caseMeasure(void)
   int fd = open(gSerialDevice, O_RDWR);
   sendGeckoSerial(fd, START);
   receiveGeckoSerial(fd, buffer);
-  //TODO: handle data received: call
+
+  processData(buffer);
+  //TODO: handle data received: call, kész: processData
+}
+
+void cli_caseMeanTime(void)
+{
+  readFromFile();
+
+  uint32_t sum = 0;
+  uint32_t mean;
+  for(int i = 0; i < dataCount; i++)
+  {
+    sum = sum + dataTable[i].responseTime;
+  }
+
+  if(dataCount == 0)
+  {
+    mean = 0;
+  }
+  else
+  {
+    mean = sum / dataCount;
+  }
+
+  printf("Mean of response times: %lu", &mean);
+
 }
