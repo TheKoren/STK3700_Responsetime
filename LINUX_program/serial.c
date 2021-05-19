@@ -43,8 +43,7 @@ struct BNUM_speed gSpeedTable[] = {
 
 messageTable_t gMessageTable[GECKO_MESSAGE_NUMBER] =
 {
-  { HELLO, 'H'},
-  { START, 'S'}
+  { START, 'f'}
 };
 
 
@@ -98,5 +97,6 @@ void sendGeckoSerial(int fd, geckoMessage_t msg)
 
 void receiveGeckoSerial(int fd, char *buffer)
 {
-	read(fd, bufffer, TTYLINE_SIZE);
+	read(fd, buffer, SERIAL_DATA_LENGTH);
+	close(fd);
 }
