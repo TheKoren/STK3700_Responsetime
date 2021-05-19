@@ -17,8 +17,9 @@
 #define FILENAME_SIZE 1024
 #define TTYLINE_SIZE 256
 #define CFGSTR_SIZE 64
-#define GECKO_MESSAGE_NUMBER 2
+#define GECKO_MESSAGE_NUMBER 1
 #define GECKO_SERIAL_PORTNAME "/dev/ttyACM0"
+#define SERIAL_DATA_LENGTH 11
 
 
 /* Structs and Typedefs */

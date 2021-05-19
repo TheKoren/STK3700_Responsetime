@@ -11,6 +11,8 @@
 #include <fcntl.h>
 #include <termios.h>
 
+#include "data.h"
+
 /* Functions */
 int commandInterpreter(int argc, char *const *argv);
 void cli_caseHelp(void);

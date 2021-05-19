@@ -1,5 +1,4 @@
 #include "cli.h"
-#include "serial.h"
 
 #define CLI_HELP_MESSAGE "Response Time Measurement Application\n\n \
 Options:\n \
@@ -8,7 +7,8 @@ Options:\n \
 \t -m ........... Start responsetime measurement.\n \
 \n"
 
-
+//TODO: -a kiírja a reakcióidők átlagát
+//      -c törli a data.txt fájl tartalmát
 int commandInterpreter(int argc, char *const *argv)
 {
   int opt = 0;
@@ -49,9 +49,9 @@ void cli_caseSpeed(char* optarg)
 
 void cli_caseMeasure(void)
 {
-  char buffer[TTYLINE_SIZE];
+  char buffer[SERIAL_DATA_LENGTH];
   int fd = open(gSerialDevice, O_RDWR);
   sendGeckoSerial(fd, START);
   receiveGeckoSerial(fd, buffer);
-  //TODO: handle data received
+  //TODO: handle data received: call
 }
