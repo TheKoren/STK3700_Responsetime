@@ -18,7 +18,7 @@ int commandInterpreter(int argc, char *const *argv);
 void cli_caseHelp(void);
 void cli_caseSpeed(char* optarg);
 void cli_caseMeasure(void);
-
+void cli_caseMeanTime(void);
 
 
 #endif

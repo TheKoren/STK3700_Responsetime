@@ -72,7 +72,7 @@ bool initGeckoSerial(int *fd)
   geckoSerial.c_cflag = CS8|CREAD|CLOCAL;
   geckoSerial.c_lflag = 0;
   geckoSerial.c_cc[VMIN] = 1;
-  geckoSerial.c_cc[VTIME] = 5;
+  geckoSerial.c_cc[VTIME] = 5; // Ennek szerintem többnek kéne lennie - Dani 05.19.
 
   local_fd = open(gSerialDevice, O_RDWR);
   if (local_fd < 0){
