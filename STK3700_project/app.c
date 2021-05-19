@@ -38,7 +38,7 @@ typedef enum {IDLE, START, RUNNING, DONE} phase;
 
 typedef struct ProgramControl {
   phase phase;
-  uint32_t reactiontime;
+  uint16_t reactiontime;
   uint16_t lightsensor;
   uint32_t seed;
 }ProgramControl;
@@ -49,7 +49,6 @@ static void prvTaskLightSensor(void *pvParam)
 {
   while(1)
   {
-      //printf("LightSensor Working");
       I2C_Work();
       vTaskDelay((10 * configTICK_RATE_HZ) / 1000); // Sleep for 10ms
   }
@@ -58,7 +57,7 @@ static void prvTaskLightSensor(void *pvParam)
 SemaphoreHandle_t reactmeasure;
 
 
-uint32_t tick0;
+uint16_t tick0;
 
 static void prvTaskStart (void *pvParam)
 {
@@ -105,13 +104,14 @@ static void prvTaskProcessData(void *pvParam)
        */
       if(Control.phase == DONE)
         {
-          /*
-           * Code...
-           */
+          char buf1[5];
+          char buf2[5];
+          sprintf(buf1,"%05d",Control.lightsensor);
           printf("Measured light: ");
-          printf("%u LUX\r\n", Control.lightsensor);
+          printf("%s LUX\r\n", buf1);
+          sprintf(buf2,"%05d",Control.reactiontime);
           printf("Measured Time: ");
-          printf("%lu ms\r\n", Control.reactiontime);
+          printf("%s ms\r\n", buf2);
           SegmentLCD_LowerNumber(Control.lightsensor);
           SegmentLCD_Number(Control.reactiontime);
           Control.phase = IDLE;
@@ -126,7 +126,6 @@ void GPIO_ODD_IRQHandler (void)
   GPIO_IntClear (1 << 9);
   if (Control.phase == RUNNING)
     {
-     // printf("Interrupt!");
       Control.lightsensor = luxvalue;
       Control.reactiontime = xTaskGetTickCountFromISR () - tick0;
       Control.phase = DONE;
