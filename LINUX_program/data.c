@@ -76,3 +76,16 @@ void processData (char * buffer)
   * Általam írt érintett függvények: processData, cli_caseMeanTime, readFromFile
   */
 }
+
+void flushData()
+{
+  int del = remove("data.txt");
+  if(!del)
+  {
+    printf("The file is Deleted succesfully");
+  }
+  else
+  {
+    perror("The file is not deleted");
+  }
+}

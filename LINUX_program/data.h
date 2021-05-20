@@ -27,5 +27,6 @@ bool getDataFromBuffer(uint16_t *rtime, uint16_t *lum, char *buf);
 void writeDataToFile(void);
 bool readFromFile(void);
 void processData (char *buffer);
+void flushData (void);
 
 #endif

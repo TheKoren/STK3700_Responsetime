@@ -8,12 +8,12 @@ Options:\n \
 \n"
 
 //TODO: -a kiírja a reakcióidők átlagát
-//      -c törli a data.txt fájl tartalmát
+//      -c törli a data.txt fájl tartalmát kész
 int commandInterpreter(int argc, char *const *argv)
 {
   int opt = 0;
 
-  while((opt = getopt(argc, argv, "hs:ma")) != -1){
+  while((opt = getopt(argc, argv, "hs:mac")) != -1){
     switch(opt){
       case 'h':
         cli_caseHelp();
@@ -26,6 +26,9 @@ int commandInterpreter(int argc, char *const *argv)
         break;
       case 'a':
         cli_caseMeanTime();
+        break;
+      case 'c':
+        cli_caseDeleteData();
         break;
     }
   }
@@ -83,4 +86,8 @@ void cli_caseMeanTime(void)
 
   printf("Mean of response times: %lu", &mean);
 
+}
+void cli_caseDeleteData()
+{
+  flushData();
 }
