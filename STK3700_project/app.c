@@ -108,7 +108,7 @@ static void prvTaskProcessData(void *pvParam)
           char buf2[5];
           sprintf(buf1,"%05d",Control.lightsensor);
           sprintf(buf2,"%05d",Control.reactiontime);
-          printf("%s, %s\r\n", buf1, buf2);
+          printf("%s,%s\r\n", buf2, buf1);
           SegmentLCD_LowerNumber(Control.lightsensor);
           SegmentLCD_Number(Control.reactiontime);
           Control.phase = IDLE;

@@ -40,16 +40,16 @@ void writeDataToFile(void)
 bool readFromFile(void)
 {
   FILE *fd = fopen("data.txt", "r");
-  if(fp == NULL)
+  if(fd == NULL)
   {
-    perror("Failed to open file 'data.txt'");
+    printf("No datafile found, creating 'data.txt'\n");
     return false;
   }
 
   uint16_t data1 = 0;
   uint16_t data2 = 0;
   dataCount = 0;
-  while(fscanf(fd,"%u,%u\n", &data1, &data2) != 0)
+  while(fscanf(fd,"%hu,%hu\n", &data1, &data2) != EOF)
   {
       dataTable[dataCount].responseTime = data1;
       dataTable[dataCount].luminosity   = data2;
@@ -67,14 +67,7 @@ void processData (char * buffer)
   getDataFromBuffer(&rtime, &lum, buffer);
   dataTable[dataCount].responseTime = rtime;
   dataTable[dataCount].luminosity   = lum;
-
-  writeDataToFile();
-
-  /*
-  *TODO: dataCount most index, vagy konkrétan dataCount?
-  * Ha csak 1 érték van, akkor dataCount 1 vagy 0?
-  * Általam írt érintett függvények: processData, cli_caseMeanTime, readFromFile
-  */
+  dataCount++;
 }
 
 void flushData()
@@ -82,10 +75,33 @@ void flushData()
   int del = remove("data.txt");
   if(!del)
   {
-    printf("The file is Deleted succesfully");
+    printf("The file has been deleted succesfully\n");
   }
   else
   {
-    perror("The file is not deleted");
+    perror("The file was not deleted\n");
   }
+}
+
+uint32_t dataAverage(void)
+{
+  int i;
+  uint32_t sum = 0;
+  uint32_t mean;
+  for(i = 0; i < dataCount; i++) {
+    sum += dataTable[i].responseTime;
+  }
+  if(dataCount == 0) {
+    mean = 0;
+  } else {
+    mean = sum / dataCount;
+  }
+  return mean;
+}
+
+void addNewData(char *buf)
+{
+  readFromFile();
+  processData(buf);
+  writeDataToFile();
 }

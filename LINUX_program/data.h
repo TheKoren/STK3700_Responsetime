@@ -10,7 +10,6 @@
 #include <fcntl.h>
 
 #include "serial.h"
-#include "data.h"
 
 /* Constants */
 #define DATA_FILE_MAX_LINES 256
@@ -28,5 +27,7 @@ void writeDataToFile(void);
 bool readFromFile(void);
 void processData (char *buffer);
 void flushData (void);
+uint32_t dataAverage(void);
+void addNewData(char *buf);
 
 #endif
