@@ -4,7 +4,9 @@
 Options:\n \
 \t -h ........... This help message.\n \
 \t -s <speed>.... Set serial speed.\n  \
-\t -m ........... Start responsetime measurement.\n \
+\t -m ........... Start reaction time measurement.\n \
+\t -a ........... Print out the average reaction time.\n \
+\t -c ........... Delete all measurement data.\n \
 \n"
 
 //TODO: -a kiírja a reakcióidők átlagát
@@ -48,8 +50,9 @@ void cli_caseSpeed(char* optarg)
     printf("Can't set speed to %d\n", speed);
     exit(EXIT_FAILURE);
   } else {
-    initGeckoSerial(&fd);
-    printf("Speed is now %d\n", gSerialSpeed);
+    if (initGeckoSerial(&fd)){
+      printf("Speed is now %d\n", gSerialSpeed);    
+    }
   }
 }
 
@@ -59,32 +62,14 @@ void cli_caseMeasure(void)
   int fd = open(gSerialDevice, O_RDWR);
   sendGeckoSerial(fd, START);
   receiveGeckoSerial(fd, buffer);
-
-  processData(buffer);
-  //TODO: handle data received: call, kész: processData
+  addNewData(buffer);
 }
 
 void cli_caseMeanTime(void)
 {
   readFromFile();
-
-  uint32_t sum = 0;
-  uint32_t mean;
-  for(int i = 0; i < dataCount; i++)
-  {
-    sum = sum + dataTable[i].responseTime;
-  }
-
-  if(dataCount == 0)
-  {
-    mean = 0;
-  }
-  else
-  {
-    mean = sum / dataCount;
-  }
-
-  printf("Mean of response times: %lu", &mean);
+  uint32_t mean = dataAverage();
+  printf("Mean of response times: %u\n", mean);
 
 }
 void cli_caseDeleteData()
