@@ -1,0 +1,7 @@
+set datafile separator ","
+set term png
+set output "data_plot.png"
+set grid
+set xlabel "Luminosity (lx)"
+set ylabel "Reacton time (ms)"
+plot "data.txt" using 2:1 notitle w p pt 7 ps 2 lt rgb "red"
