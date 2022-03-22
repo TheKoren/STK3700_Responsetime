@@ -1,6 +1,6 @@
 STK3700_project/.pdm/* linguist-vendored
 STK3700_project/.settings/* linguist-vendored
 STK3700_project/.uceditor/* linguist-vendored
-STK3700_project/.autogen/* linguist-vendored
-STK3700_project/.config/* linguist-vendored
-STK3700_project/.gecko_sdk_3.1.1/* linguist-vendored
+STK3700_project/autogen/* linguist-vendored
+STK3700_project/config/* linguist-vendored
+STK3700_project/gecko_sdk_3.1.1/* linguist-vendored
