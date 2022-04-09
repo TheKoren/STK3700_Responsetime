@@ -187,7 +187,6 @@ void app_init(void)
   );
 
 
-
   GPIO_PinModeSet(gpioPortB, 9, gpioModeInput, 0);
   GPIO_ExtIntConfig(gpioPortB, 9, 9, false, true, true);
 
