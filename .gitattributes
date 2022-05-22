@@ -1,9 +1,9 @@
-STK3700_project/.pdm/* linguist-vendored=true
-STK3700_project/.settings/* linguist-vendored=true
-STK3700_project/.uceditor/* linguist-vendored=true
-STK3700_project/autogen/* linguist-vendored=true
-STK3700_project/config/* linguist-vendored=true
-STK3700_project/gecko_sdk_3.1.1/* linguist-vendored=true
+STK3700_project/.pdm/** linguist-vendored=true
+STK3700_project/.settings/** linguist-vendored=true
+STK3700_project/.uceditor/** linguist-vendored=true
+STK3700_project/autogen/** linguist-vendored=true
+STK3700_project/config/** linguist-vendored=true
+STK3700_project/gecko_sdk_3.1.1/** linguist-vendored=true
 STK3700_project/.cproject linguist-vendored=true
 STK3700_project/.cproject.orig linguist-vendored=true
 STK3700_project/.project linguist-vendored=true
